@@ -2,6 +2,17 @@
 // Consult 13.5, module, etc.
 // Main files to be worked by step, models, index.js(models), api routes, server and may be database
 // Main question today, by when insomnia core, how and when to start testing if all working since starter code 
+//According to other module assignment, connection.js is serving connection to SQl, models are defined under js files, 
+//and their relationship on index.js, then 
+//these relations are exported, and accessed by API routes, Server.js is connection to server only, CRUD is 
+//happening on API routes using server, after that all the data from routes combined on index.js along with 
+//middlewear and exported back to server.js, server.js is just a middle person access body to database and connection.js is to establish 
+//that connection. Seeds file is to use those classes and relations to create model tables in SQL, and seeds/index.js
+//is the connection of all seeds and connection to SQL database asynchronously to create new tables
+//using new classes, all this is linked to database which is created through schema.sql. All Changes
+//to database will be seen by insomnia, CRUD operations to be covered by insomnia using video
+//check connection, all models, index.js relations including 'as', testing incl insomnia and update acceptance critieria   
+
 
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
