@@ -1,7 +1,7 @@
-//explanation at bottom
-//consult 13.5, module, etc.
-// Main files to be worked by step, models, api routes, server and may be database
-
+// Explanation at bottom
+// Consult 13.5, module, etc.
+// Main files to be worked by step, models, index.js(models), api routes, server and may be database
+// Main question today, by when insomnia core, how and when to start testing if all working since starter code 
 
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
