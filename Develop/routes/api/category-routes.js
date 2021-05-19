@@ -1,4 +1,6 @@
 //explanation at bottom
+//consult 13.5, module, etc.
+// Main files to be worked by step, models, api routes, server and may be database
 
 
 const router = require('express').Router();
