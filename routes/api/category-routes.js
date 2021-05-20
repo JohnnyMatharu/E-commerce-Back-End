@@ -22,8 +22,7 @@ router.get('/', (req, res) => {
   res.json(data)
 
  })
-  // find all categories
-  // be sure to include its associated Products
+  // working
 });
 
 
@@ -37,9 +36,8 @@ router.get('/:id', (req, res) => {
     res.json(data)
   
    })
-   //to be checked on insomnia
-  // find one category by its `id` value
-  // be sure to include its associated Products
+   //working
+  
 });
 
 
@@ -54,7 +52,7 @@ router.post('/', (req, res) => {
       res.json(data)
     
      })
-     //to be checked on insomnia and syntax for expectation needs to be too
+     //working
   });
 
 
@@ -70,7 +68,7 @@ router.put('/:id', (req, res) => {
     res.json(data)
   
    })
-   //to be checked on insomnia
+   //working
 });
 
 
@@ -87,7 +85,7 @@ router.delete('/:id', (req, res) => {
       res.json(data)
     
      })
-     //to be checked on insomnia
+     //this is to be fixed
   });
 
 module.exports = router;
