@@ -5,47 +5,42 @@ const sequelize = require('../config/connection');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {
-/*
-class Post extends Model {
-  static upvote(body, models) {
-    return models.Vote.create({
-      user_id: body.user_id,
-      post_id: body.post_id
-    }).then(() => {
-      return Post.findOne({
-        where: {
-          id: body.post_id
-        },
+//may include matching 2 ids and selecting that data
+  return Product.findOne({
+    //may include a where statement for id: body.category_id
         attributes: [
           'id',
-          'post_url',
-          'title',
-          'created_at',
-          [
-            sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
-            'vote_count'
-          ]
+          'product_name',
+          'price',
+          'stock', 
+          'category_id',
         ],
         include: [
           {
-            model: models.Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-            include: {
-              model: models.User,
-              attributes: ['username']
+            model: models.Category,
+            attributes: ['id', 'category_name'],
+        include: {
+              model: models.Tag,
+              attributes: ['id', 'tag_name']
             }
           }
         ]
       });
-    });
-  }
-}
+    };
+  
 
+//Attributes
+//id,product_name,price,stock, category_id
+//once you have data check of category id is not repeating, if yes then delete
 
-*/
-}
-
+//from model category
+//id, category_name 
+//from model tag
+//id, tag_name
 // set up fields and rules for Product model
+
+
+
 Product.init(
   {
     // define columns
