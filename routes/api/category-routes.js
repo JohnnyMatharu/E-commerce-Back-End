@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Explanation at bottom
 // Consult 13.5, module, etc.
 //According to other module assignment, connection.js is serving connection to SQl, models are defined under js files, 
@@ -9,6 +10,8 @@
 //using new classes, all this is linked to database which is created through schema.sql. All Changes
 //to database will be seen by insomnia, CRUD operations to be covered by insomnia using video, make sure develop folder
 
+=======
+>>>>>>> develop
 
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
@@ -22,8 +25,12 @@ router.get('/', (req, res) => {
   res.json(data)
 
  })
+<<<<<<< HEAD
   // find all categories
   // be sure to include its associated Products
+=======
+  // working
+>>>>>>> develop
 });
 
 
@@ -37,9 +44,14 @@ router.get('/:id', (req, res) => {
     res.json(data)
   
    })
+<<<<<<< HEAD
    //to be checked on insomnia
   // find one category by its `id` value
   // be sure to include its associated Products
+=======
+   //working
+  
+>>>>>>> develop
 });
 
 
@@ -54,7 +66,11 @@ router.post('/', (req, res) => {
       res.json(data)
     
      })
+<<<<<<< HEAD
      //to be checked on insomnia and syntax for expectation needs to be too
+=======
+     //working
+>>>>>>> develop
   });
 
 
@@ -70,13 +86,23 @@ router.put('/:id', (req, res) => {
     res.json(data)
   
    })
+<<<<<<< HEAD
    //to be checked on insomnia
+=======
+   //working
+>>>>>>> develop
 });
 
 
 
 router.delete('/:id', (req, res) => {
+<<<<<<< HEAD
   // delete a category by its `id` value
+=======
+  
+  // delete a category by its `id` value
+  // working for new entries
+>>>>>>> develop
   Category.destroy({
     where: {
       id: req.params.id
@@ -87,6 +113,7 @@ router.delete('/:id', (req, res) => {
       res.json(data)
     
      })
+<<<<<<< HEAD
      //to be checked on insomnia
   });
 
@@ -127,6 +154,18 @@ Acceptance Criteria
 GIVEN a functional Express.js API
 
 HERE
+=======
+  
+  });
+
+module.exports = router; 
+
+//installed sql2, sequelize, dotenv, rest could be seen through dependencies
+
+
+/*
+Acceptance Criteria
+>>>>>>> develop
 
 WHEN I add my database name, MySQL username, and MySQL password to an
 environment variable file
@@ -140,4 +179,8 @@ WHEN I open API GET routes in Insomnia Core for categories, products, or tags
 THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
 THEN I am able to successfully create, update, and delete data in my database
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> develop
