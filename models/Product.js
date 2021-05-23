@@ -4,43 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
-class Product extends Model {
-//may include matching 2 ids and selecting that data
-//check return statement
-
-return Product.findOne({
-    //may include a where statement for id: body.category_id
-        attributes: [
-          'id',
-          'product_name',
-          'price',
-          'stock', 
-          'category_id',
-        ],
-        include: [
-          {
-            model: models.Category,
-            attributes: ['id', 'category_name'],
-        include: {
-              model: models.Tag,
-              attributes: ['id', 'tag_name']
-            }
-          }
-        ]
-      });
-    };
-  
-
-//Attributes
-//id,product_name,price,stock, category_id
-//once you have data check of category id is not repeating, if yes then delete
-
-//from model category
-//id, category_name 
-//from model tag
-//id, tag_name
-// set up fields and rules for Product model
-
+class Product extends Model {}
 
 
 Product.init(

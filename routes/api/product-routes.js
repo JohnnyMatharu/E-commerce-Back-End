@@ -8,75 +8,22 @@ router.get('/', (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
  
- 
   Product.findAll({
-/*
-
-Post.findAll({
-    attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-    ],
-    order: [['created_at', 'DESC']],
     include: [
+      Category,
       {
-        model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
+        model: Tag,
+        through: ProductTag,
       },
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    ],
   })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
+    .then((products) => res.json(products))
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-*/
-  }).then(data => {
-  
-    res.json(data)
-  
-   })
-    // check
-  });
-
-
-
-
-
-
-
-
-
-
-// get one product
-router.get('/:id', (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
-});
-
-// create new product
-router.post('/', (req, res) => {
-  /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
-  */
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
