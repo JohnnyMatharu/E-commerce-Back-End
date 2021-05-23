@@ -88,11 +88,11 @@ router.delete('/:id', (req, res) => {
      //this is to be fixed
   });
 
-module.exports = router;
+module.exports = router; 
 
 //installed sql2, sequelize, dotenv, rest could be seen through dependencies
 // api/categories call this this.route, routes are made already
- //finish models, and routes in api folder, nothing server.js, put in insomnia in end to test  
+//finish models, and routes in api folder, nothing server.js, put in insomnia in end to test  
  
 //Hilary
 /*
