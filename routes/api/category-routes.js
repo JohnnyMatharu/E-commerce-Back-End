@@ -1,14 +1,3 @@
-// Explanation at bottom
-// Consult 13.5, module, etc.
-//According to other module assignment, connection.js is serving connection to SQl, models are defined under js files, 
-//and their relationship on index.js, then these relations are exported, and accessed by API routes, Server.js is connection to server only, CRUD is 
-//happening on API routes using server, after that all the data from routes combined on index.js along with 
-//middlewear and exported back to server.js, server.js is just a middle person access body to database and connection.js is to establish 
-//that connection. Seeds file will take info by 'npm run seed' to get info from seeds folder, port and sql server needs to be running with insomnia
-//is the connection of all seeds and connection to SQL database asynchronously to create new tables
-//using new classes, all this is linked to database which is created through schema.sql. All Changes
-//to database will be seen by insomnia, CRUD operations to be covered by insomnia using video, make sure develop folder
-
 
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
@@ -74,7 +63,9 @@ router.put('/:id', (req, res) => {
 
 
 router.delete('/:id', (req, res) => {
+  
   // delete a category by its `id` value
+  // working for new entries
   Category.destroy({
     where: {
       id: req.params.id
@@ -85,46 +76,16 @@ router.delete('/:id', (req, res) => {
       res.json(data)
     
      })
-     //this is to be fixed
+  
   });
 
 module.exports = router; 
 
 //installed sql2, sequelize, dotenv, rest could be seen through dependencies
-// api/categories call this this.route, routes are made already
-//finish models, and routes in api folder, nothing server.js, put in insomnia in end to test  
- 
-//Hilary
-/*
-Hilary:
-Insomnia
 
-You can use table plus application if needed
 
-Submit video of backend
-Mock up gifs, videos
-
-Starter code
-Notes on starter
-
-Ecommerce site:
-Express API: use sequelize to connect database
-
-Connection.js: variables wil go to .env file
-
-Starter code contains seed files, database is created
-
-Notes in server.js
-
-*/
-
-//routes to index to api, to index to express, api routes use models using sequelize and return
-//models to model database and seeds to fill value , npm i installed, check dependencies if needed
 /*
 Acceptance Criteria
-GIVEN a functional Express.js API
-
-HERE
 
 WHEN I add my database name, MySQL username, and MySQL password to an
 environment variable file
