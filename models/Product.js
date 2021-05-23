@@ -6,7 +6,9 @@ const sequelize = require('../config/connection');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {
 //may include matching 2 ids and selecting that data
-  return Product.findOne({
+//check return statement
+
+return Product.findOne({
     //may include a where statement for id: body.category_id
         attributes: [
           'id',
