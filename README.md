@@ -5,6 +5,8 @@ E-commerce Back End
 This application is to perform CRUD operation on available database which invoves GET all items, one item, posting new entries, updating enteries, and deleting entries including the associated model data. Mysql database is using sequelize and backend operations could be seen in Insomnia 
 
 # Link 
+https://drive.google.com/file/d/1P9evl03P2lsyRm6ZK2iR-b5rJMgCNeoU/view
+https://drive.google.com/file/d/1jHOy1y_CVQ67mDnMQYQ3eelsLgQCSgqX/view
 
 
 # Github

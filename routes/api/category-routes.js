@@ -81,3 +81,9 @@ router.delete('/:id', (req, res) => {
     
      })
     });
+  
+
+module.exports = router; 
+
+//installed sql2, sequelize, dotenv, rest could be seen through dependencies
+
