@@ -2,7 +2,7 @@
 E-commerce Back End 
 
 # Description
-In this assignment we have used the Object Oriented Programming to create models. Each model has a characteristic that we need which solves the problem of repetition of description of data in database. Using models we have reduced chances of confusion in describing relationships monotonously.  
+In this assignment we have used the MVC Sequelize to create models. Each model has a characteristic that we need which solves the problem of repetition of description of data in database. Using models we have reduced chances of confusion in describing relationships monotonously.  
 
 This application is to perform CRUD operation on available database which invoves GET all items, one item, posting new entries, updating enteries, and deleting entries including the associated model data. Mysql database is using sequelize and backend operations could be seen in Insomnia 
 
