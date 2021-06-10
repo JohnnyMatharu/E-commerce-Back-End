@@ -17,4 +17,4 @@ https://drive.google.com/file/d/1jHOy1y_CVQ67mDnMQYQ3eelsLgQCSgqX/view
 https://github.com/JohnnyMatharu/E-commerce-Back-End/tree/main
 
 # Create by
-Johny (Indermeet Singh) Matharu
+Johny (Indermeet) Matharu
